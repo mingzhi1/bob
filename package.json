@@ -1,6 +1,8 @@
 {
-  "name":"af-node-base",
+  "name":"bob",
   "version":"0.0.1",
+  "main": "app.js",
+  "private": true,
   "dependencies":{
       "mongodb": "",
       "mongoose":"",
@@ -8,5 +10,15 @@
       "express":"",
       "buffer-crc32": "0.1.x",
       "nodegrass":"*"
+  }
+  "devDependencies": {
+    "should": "*",
+    "mocha": "*",
+    "rewire": "*",
+    "jscover": "*",
+    "pedding": "*"
+  },
+  "scripts": {
+    "test": "make test"
   }
 }
