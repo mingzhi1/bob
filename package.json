@@ -1,0 +1,12 @@
+{
+  "name":"af-node-base",
+  "version":"0.0.1",
+  "dependencies":{
+      "mongodb": "",
+      "mongoose":"",
+      "jade": "",
+      "express":"",
+      "buffer-crc32": "0.1.x",
+      "nodegrass":"*"
+  }
+}

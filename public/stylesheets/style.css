@@ -1,0 +1,71 @@
+td.bot{
+    float:left;
+    text-align:left;
+    width:390px;
+    margin:2px 1px 2px 1px;
+}
+.man{
+    float: right;
+    text-align:right;
+    width:400px;
+    margin:2px 0px 2px 0px;
+}
+
+#box{
+    position:relative;
+    float:left;
+    margin:10px;
+    width:410px;
+    height:600px;
+    max-height:600px;
+}
+#box #msgs {
+    position:relative;
+    overflow:auto;
+    height:500px;
+    border:1px solid #999;
+}
+#chat-area{
+    margin:4px 5px 0px 0px;
+}
+#chatbtn{
+    float:right;
+    width:110px;
+    height:30px;
+    background-color: transparent;
+    border: 1px solid #999999;
+    color:#000000;
+    border-radius:0px;
+    font-size:14pt;
+    margin:0 6px  ;
+    padding-top:10px;
+    position:relative;
+    text-align:center;
+    cursor:pointer;
+    text-align:center;
+}
+#chatbox {
+    float:left;
+    width:100%;
+    max-width:280px;
+    min-width:280px;
+    margin:0 6px 6 6;
+    height:37px;
+    display:block;
+}
+
+#chatbox .userinput {
+    background-color: transparent;
+    border: 1px solid #999999;
+    color: #5F5F5F;
+    border-radius:0px;
+    font-size: 1.25em;
+    ime-mode: active;
+    max-width: 280px;
+    min-width: 280px;
+    height:37px;
+    margin:0 6px 6 6;
+    text-align: left;
+    vertical-align: bottom;
+    width: 280px;
+}

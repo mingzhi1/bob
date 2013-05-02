@@ -1,0 +1,27 @@
+!!! 5
+html
+    head
+        title  Talk with Bob
+        meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+        script(type='text/javascript', src='http://code.jquery.com/jquery-1.4.4.min.js')
+        script(type='text/javascript', src='/javascripts/chat.js')
+        link(rel='stylesheet', type='text/css', href='/stylesheets/style.css')
+    body(style='background-color: #e5e5d7;')
+        #box
+            form#chatform(style='display: inline;', method='post', onsubmit='return false;', name='chatform')
+                #msgs
+                    table.new-templete
+                        tr
+                            td.bot
+                                | Hi~!
+                #chat-area
+                    #chatbox
+                        input#userinput.userinput(type='text', maxlength='100', name='userinput')
+                    #chatbtn
+                        span Send
+
+            table.templete.hidden
+                tr
+                    td.man
+                tr
+                    td.bot
