@@ -9,11 +9,6 @@ describe('app.js', function () {
     app.close();
   });
 
-  it('should / status 200', function (done) {
-    app.request().get('/').end(function (res) {
-      res.should.status(200);
-      done();
-    });
-  });
+  console.log('start');
 
 });
