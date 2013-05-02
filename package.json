@@ -17,9 +17,8 @@
     "rewire": "*",
     "jscover": "*",
     "pedding": "*",
-    "expresso": "*"
   },
   "scripts": {
-    "test": "expresso test/*"
+    "test": "make test"
   }
 }
