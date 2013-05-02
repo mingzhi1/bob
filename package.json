@@ -16,9 +16,10 @@
     "mocha": "*",
     "rewire": "*",
     "jscover": "*",
-    "pedding": "*"
+    "pedding": "*",
+    "expresso": "*"
   },
   "scripts": {
-    "test": "make test"
+    "test": "expresso test/*"
   }
 }
