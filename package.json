@@ -16,7 +16,7 @@
     "mocha": "*",
     "rewire": "*",
     "jscover": "*",
-    "pedding": "*",
+    "pedding": "*"
   },
   "scripts": {
     "test": "make test"
