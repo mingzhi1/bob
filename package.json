@@ -10,7 +10,7 @@
       "express":"",
       "buffer-crc32": "0.1.x",
       "nodegrass":"*"
-  }
+  },
   "devDependencies": {
     "should": "*",
     "mocha": "*",
