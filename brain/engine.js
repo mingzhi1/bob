@@ -19,7 +19,6 @@ AiEngine = (function() {
             topic: null,
             bot: botData,
             set: function(name, value) {
-                console.log('dfdfdfdf');
                 return _this.view[name] = value;
             },
             get: function(name) {
