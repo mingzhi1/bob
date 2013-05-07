@@ -1,6 +1,5 @@
 var AiEngine;
 var _ = require('underscore');
-var async = require('async');
 var mustache = require('mustache');
 
 AiEngine = (function() {
@@ -31,7 +30,7 @@ AiEngine = (function() {
                     new RegExp(category.pattern.replace('*', '([^/?!.;:$]*)'), "i");
             });
         });
-    }
+    };
 
     AiEngine.prototype.getCurrentTopic = function() {
         var _this = this;
