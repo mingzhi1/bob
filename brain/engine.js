@@ -1,18 +1,17 @@
-var AiEngine;
 var _ = require('underscore');
 var mustache = require('mustache');
 
-AiEngine = (function() {
+var Engine = (function () {
 
-    function AiEngine(roomName, topics, botData) {
+    function Engine(roomName, topics, botData) {
         var _this = this;
         this.roomName = roomName;
         this.topics = topics;
         if (!this.topics) {
-            throw "Topics not found";
+            //throw "Topics not found";
         }
         if (!this.roomName) {
-            throw "Room name is undefined not found";
+            //throw "Room name is undefined not found";
         }
         this.view = {
             topic: null,
@@ -32,14 +31,14 @@ AiEngine = (function() {
         });
     };
 
-    AiEngine.prototype.getCurrentTopic = function() {
+    Engine.prototype.getCurrentTopic = function() {
         var _this = this;
         return _.find(this.topics, function(topic) {
             return topic.name === _this.view.topic;
         });
     };
 
-    AiEngine.prototype.findCategory = function(message) {
+    Engine.prototype.findCategory = function(message) {
         var topic,
             _this = this;
         topic = this.getCurrentTopic();
@@ -51,7 +50,7 @@ AiEngine = (function() {
         });
     };
 
-    AiEngine.prototype.reply = function(authorData, message, cb) {
+    Engine.prototype.reply = function(authorData, message, cb) {
         var category, match, responce, _ref;
         category = this.findCategory(message);
         if (!category) {
@@ -71,8 +70,8 @@ AiEngine = (function() {
         return cb(null, responce);
     };
 
-    return AiEngine;
+    return Engine;
 
 })();
 
-module.exports = AiEngine;
+module.exports = Engine;

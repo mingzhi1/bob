@@ -7,8 +7,7 @@ var TopicSchema = new Schema({
   master_id: { type: ObjectId, index: true },
   author_id: { type: ObjectId },
   topic_id: { type: ObjectId },
-  has_read: { type: Boolean, default: false },
-  create_at: { type: Date, default: Date.now }
+  has_read: { type: Boolean, default: false }
 });
 
 mongoose.model('Topic', TopicSchema);

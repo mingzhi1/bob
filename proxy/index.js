@@ -1,3 +1,4 @@
-exports.Topic = require('./Topic');
-exports.Response = require('./Response');
-exports.Pattern = require('./Pattern');
+exports.Topic = require('./topic');
+exports.Response = require('./response');
+exports.Pattern = require('./pattern');
+exports.Method = require('./method');

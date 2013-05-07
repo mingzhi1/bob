@@ -11,7 +11,9 @@ mongoose.connect(config.db, function (err) {
 require('./response');
 require('./topic');
 require('./pattern');
+require('./method');
 
 exports.Topic = mongoose.model('Topic');
 exports.Response = mongoose.model('Response');
 exports.Pattern = mongoose.model('Pattern');
+exports.Method = mongoose.model('Method');
