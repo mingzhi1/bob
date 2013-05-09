@@ -1,5 +1,6 @@
 var _ = require('underscore');
 var mustache = require('mustache');
+var parser = require('./parser');
 
 var Engine = (function () {
 
@@ -49,7 +50,7 @@ var Engine = (function () {
             return category["room:" + _this.roomName].test(message);
         });
     };
-
+    
     Engine.prototype.reply = function(authorData, message, cb) {
         var category, match, responce, _ref;
         category = this.findCategory(message);
