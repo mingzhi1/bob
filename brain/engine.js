@@ -4,15 +4,11 @@ var parser = require('./parser');
 
 var Engine = (function () {
 
-    function Engine(roomName, topics, botData) {
+    function Engine( topics, botData) {
         var _this = this;
-        this.roomName = roomName;
         this.topics = topics;
         if (!this.topics) {
             //throw "Topics not found";
-        }
-        if (!this.roomName) {
-            //throw "Room name is undefined not found";
         }
         this.view = {
             topic: null,
@@ -26,7 +22,7 @@ var Engine = (function () {
         };
         _.each(this.topics, function(topic) {
             return _.each(topic.categories, function(category) {
-                return category["room:" + _this.roomName] =
+                return category["room:" + roomName] =
                     new RegExp(category.pattern.replace('*', '([^/?!.;:$]*)'), "i");
             });
         });
@@ -47,7 +43,7 @@ var Engine = (function () {
             return this.view.topic = null;
         }
         return _.find(topic.categories, function(category) {
-            return category["room:" + _this.roomName].test(message);
+            return category["room:" + roomName].test(message);
         });
     };
     
@@ -60,7 +56,7 @@ var Engine = (function () {
         if ((_ref = category.template) != null ? _ref.link : void 0) {
             return this.reply(authorData, category.template.link, cb);
         }
-        match = category["room:" + this.roomName].exec(message);
+        match = category["room:" + roomName].exec(message);
         if (match && match.length > 0) {
             this.view.star = match[1];
         }
