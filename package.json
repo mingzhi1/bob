@@ -9,7 +9,7 @@
       "jade": "",
       "express":"",
       "buffer-crc32": "0.1.x",
-      "nodegrass":"*"
+      "underscore":"*"
   },
   "devDependencies": {
     "should": "*",
