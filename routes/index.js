@@ -7,12 +7,12 @@ exports.index = function(req, res){
 };
 
 exports.said = function(req, res){
-    //req.setEncoding('utf8');
     var theUrl = url.parse(req.url);
 
     var content = querystring.parse(theUrl.query);
     var obj = content.msg;
 
     res.writeHead(200, {'Content-Type': 'text/json'});
+    var response = brain(obj);
     res.end(JSON.stringify({ result: '100', response:obj}));
 };
