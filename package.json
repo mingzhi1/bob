@@ -4,10 +4,10 @@
   "main": "app.js",
   "private": true,
   "dependencies":{
-      "mongodb": "",
-      "mongoose":"",
-      "jade": "",
-      "express":"",
+      "mongodb":"*",
+      "mongoose":"*",
+      "jade":"*",
+      "express":"*",
       "buffer-crc32": "0.1.x",
       "underscore":"*",
       "mustache":"*"

@@ -2,7 +2,7 @@ var express = require('express')
     , routes = require('./routes')
     , http = require('http')
     , path = require('path');
-var config = require('./config/config').config;
+var config = require('./config/config');
 var app = express();
 var MemStore = express.session.MemoryStore;
 

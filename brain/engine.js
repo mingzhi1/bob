@@ -4,7 +4,7 @@ var parser = require('./parser');
 
 var Engine = (function () {
 
-    function Engine( topics, botData) {
+    function Engine(topics, botData) {
         var _this = this;
         this.topics = topics;
         if (!this.topics) {
